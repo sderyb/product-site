@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Результаты</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🏆 Таблица лидеров</h1>
+    <div id="top"></div>
+    <button class="btn-primary" onclick="window.location.href='index.html'" style="margin-top: 20px;">🏠 На главную</button>
+</div>
+
+<script>
+async function load(){
+    const res = await fetch("/api/results");
+    let data = await res.json();
+    data.sort((a,b) => b.percentage - a.percentage);
+    const top = data.slice(0,10);
+    
+    document.getElementById("top").innerHTML = `
+        <div class="leaderboard">
+            ${top.map((r,i)=>`
+                <div class="leaderboard-item">
+                    <span class="rank">${i+1}</span>
+                    <span class="name">${r.nickname}</span>
+                    <span class="level">${r.level}</span>
+                    <span class="score">${r.score}/${r.total}</span>
+                    <span class="percent">${r.percentage}%</span>
+                </div>
+            `).join("")}
+        </div>
+    `;
+}
+load();
+setInterval(load, 5000);
+</script>
+
+</body>
+</html>

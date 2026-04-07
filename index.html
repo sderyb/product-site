@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интерактивный тест по информатике</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">💻</div>
+    <h1>Интерактивный тест по информатике</h1>
+    
+    <div class="registration-form" id="registrationForm">
+        <h2>📝 Регистрация</h2>
+        <input type="text" id="fullName" placeholder="Ваше полное имя" class="input-field">
+        <input type="text" id="nickname" placeholder="Игровой ник (только буквы, мин 3)" class="input-field">
+        <input type="email" id="email" placeholder="Email (необязательно)" class="input-field">
+        <select id="ageGroup" class="input-field">
+            <option value="">Выберите возрастную группу</option>
+            <option value="child">7-12 лет</option>
+            <option value="teen">13-17 лет</option>
+            <option value="adult">18+ лет</option>
+        </select>
+        <button class="btn-primary" onclick="registerAndProceed()">Продолжить →</button>
+    </div>
+
+    <div id="levelSelection" style="display:none;">
+        <h2>🎯 Выберите уровень сложности:</h2>
+        <div class="level-buttons">
+            <div class="btn" onclick="go('1-4')">🌟 1–4 класс<br><small>Основы компьютера</small></div>
+            <div class="btn" onclick="go('5-8')">📚 5–8 класс<br><small>Алгоритмы и данные</small></div>
+            <div class="btn" onclick="go('9-11')">🚀 9–11 класс<br><small>Программирование</small></div>
+            <div class="btn" onclick="go('college')">🎓 Колледж<br><small>Продвинутый уровень</small></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function registerAndProceed() {
+    const fullName = document.getElementById("fullName").value.trim();
+    const nickname = document.getElementById("nickname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const ageGroup = document.getElementById("ageGroup").value;
+    
+    // Проверка ника
+    const regex = /^[а-яА-Яa-zA-Z]{3,}$/;
+    
+    if(!fullName) {
+        alert("Пожалуйста, введите ваше полное имя!");
+        return;
+    }
+    
+    if(!regex.test(nickname)){
+        alert("Ник должен быть минимум 3 буквы и только буквы!");
+        return;
+    }
+    
+    if(!ageGroup) {
+        alert("Пожалуйста, выберите возрастную группу!");
+        return;
+    }
+    
+    // Сохраняем данные пользователя
+    localStorage.setItem("fullName", fullName);
+    localStorage.setItem("nickname", nickname);
+    localStorage.setItem("email", email);
+    localStorage.setItem("ageGroup", ageGroup);
+    
+    // Показываем выбор уровня
+    document.getElementById("registrationForm").style.display = "none";
+    document.getElementById("levelSelection").style.display = "block";
+}
+
+function go(level){
+    localStorage.setItem("level", level);
+    window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>

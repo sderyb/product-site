@@ -1,0 +1,241 @@
+[
+  {
+    "nickname": "sderyabin",
+    "level": "5-8",
+    "score": 4,
+    "total": 5,
+    "percentage": 80,
+    "date": "07.04.2026, 16:35:56"
+  },
+  {
+    "nickname": "sderyabinaa",
+    "level": "9-11",
+    "score": 0,
+    "total": 5,
+    "percentage": 0,
+    "date": "07.04.2026, 16:36:06"
+  },
+  {
+    "nickname": "sderyabin",
+    "level": "college",
+    "score": 0,
+    "total": 6,
+    "percentage": 0,
+    "date": "07.04.2026, 16:42:38"
+  },
+  {
+    "nickname": "sderyabin",
+    "fullName": "Сергей",
+    "level": "college",
+    "score": 4,
+    "total": 6,
+    "percentage": 67,
+    "date": "07.04.2026, 16:49:10",
+    "detailedResults": [
+      {
+        "questionNumber": 1,
+        "question": "Что такое ООП? Назовите 3 принципа",
+        "userAnswer": "Нет ответа",
+        "correctAnswer": "Развернутый ответ",
+        "isCorrect": 0,
+        "explanation": "Правильный ответ объяснен выше."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Что делает метод GET в HTTP?",
+        "userAnswer": "Нет ответа",
+        "correctAnswer": "Получает данные",
+        "isCorrect": false,
+        "explanation": "Правильный ответ объяснен выше."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Напишите код создания REST API на Express",
+        "userAnswer": "Код предоставлен",
+        "correctAnswer": "Пример кода",
+        "isCorrect": true,
+        "explanation": "Правильный ответ объяснен выше."
+      },
+      {
+        "questionNumber": 4,
+        "question": "Что такое SQL инъекция и как защититься?",
+        "userAnswer": "dd",
+        "correctAnswer": "Развернутый ответ",
+        "isCorrect": true,
+        "explanation": "Правильный ответ объяснен выше."
+      },
+      {
+        "questionNumber": 5,
+        "question": "Нарисуйте архитектуру клиент-серверного приложения",
+        "userAnswer": "Нет ответа",
+        "correctAnswer": "Правильный ответ",
+        "isCorrect": true,
+        "explanation": "Правильный ответ объяснен выше."
+      },
+      {
+        "questionNumber": 6,
+        "question": "Что такое Git? Напишите 5 основных команд",
+        "userAnswer": "dd",
+        "correctAnswer": "Развернутый ответ",
+        "isCorrect": true,
+        "explanation": "Правильный ответ объяснен выше."
+      }
+    ],
+    "details": {
+      "1": "def binary_search(arr, target):\n    \"\"\"\n    Бинарный поиск в отсортированном массиве.\n    Возвращает индекс элемента, если он найден, иначе -1.\n    \"\"\"\n    left = 0\n    right = len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid  # Элемент найден\n        elif arr[mid] < target:\n            left = mid + 1  # Ищем в правой половине\n        else:\n            right = mid - 1  # Ищем в левой половине\n\n    return -1  # Элемент не найден\n\n# Пример использования:\ndata = [1, 3, 5, 7, 9, 11, 13, 15]\ntarget_val = 7\nresult = binary_search(data, target_val)\nprint(f\"Индекс: {result}\") # Вывод: Индекс: 3\n",
+      "2": "dd",
+      "3": "dd",
+      "4": "dd",
+      "5": "dd",
+      "6": "dd",
+      "8": "dd",
+      "9": "dd",
+      "11": "dd",
+      "14": "dd"
+    }
+  },
+  {
+    "nickname": "sfdre",
+    "fullName": "sergey derab",
+    "level": "college",
+    "score": 0,
+    "total": 3,
+    "percentage": 0,
+    "date": "07.04.2026, 16:55:45",
+    "detailedResults": [
+      {
+        "questionNumber": 1,
+        "question": "Реализуйте бинарный поиск в отсортированном массиве",
+        "type": "code",
+        "userAnswer": "Код предоставлен",
+        "correctAnswer": "function binarySearch(arr, target) {\n  let left = 0, right = arr.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+        "isCorrect": false,
+        "explanation": "Бинарный поиск работает за O(log n) и требует отсортированный массив",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "errors": [
+            "Критическая ошибка: Unexpected identifier 'binary_search'"
+          ],
+          "output": null,
+          "suggestions": [
+            "Проверьте синтаксис вашего кода"
+          ]
+        }
+      },
+      {
+        "questionNumber": 2,
+        "question": "Объясните разницу между SQL и NoSQL базами данных. Приведите примеры использования",
+        "type": "write",
+        "userAnswer": "ыыыsss",
+        "correctAnswer": "SQL базы (PostgreSQL, MySQL) используют таблицы и строгую схему, подходят для сложных запросов. NoSQL (MongoDB, Redis) более гибкие, хранят документы/ключ-значения, лучше для больших данных и быстрой разработки.",
+        "isCorrect": false,
+        "explanation": "Сравните структуру, гибкость, производительность и сценарии использования",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "matchedKeywords": [],
+          "missingKeywords": [],
+          "suggestions": [
+            "Напишите более развернутый ответ"
+          ],
+          "errors": [
+            "Ответ слишком короткий"
+          ]
+        }
+      },
+      {
+        "questionNumber": 3,
+        "question": "Напишите функцию для быстрой сортировки (quicksort)",
+        "type": "code",
+        "userAnswer": "Код предоставлен",
+        "correctAnswer": "function quickSort(arr) {\n  if (arr.length <= 1) return arr;\n  const pivot = arr[0];\n  const left = [], right = [];\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) left.push(arr[i]);\n    else right.push(arr[i]);\n  }\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+        "isCorrect": false,
+        "explanation": "Быстрая сортировка использует разделяй-и-властвуй с опорным элементом",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "errors": [
+            "Ошибка выполнения: ssss is not defined"
+          ],
+          "output": null,
+          "suggestions": [
+            "Проверьте синтаксис вашего кода"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "nickname": "sfdre",
+    "fullName": "sergey derab",
+    "level": "college",
+    "score": 0,
+    "total": 3,
+    "percentage": 0,
+    "date": "07.04.2026, 16:55:57",
+    "detailedResults": [
+      {
+        "questionNumber": 1,
+        "question": "Реализуйте бинарный поиск в отсортированном массиве",
+        "type": "code",
+        "userAnswer": "Код предоставлен",
+        "correctAnswer": "function binarySearch(arr, target) {\n  let left = 0, right = arr.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+        "isCorrect": false,
+        "explanation": "Бинарный поиск работает за O(log n) и требует отсортированный массив",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "errors": [
+            "Ошибка выполнения: ыыы is not defined"
+          ],
+          "output": null,
+          "suggestions": [
+            "Проверьте синтаксис вашего кода"
+          ]
+        }
+      },
+      {
+        "questionNumber": 2,
+        "question": "Объясните разницу между SQL и NoSQL базами данных. Приведите примеры использования",
+        "type": "write",
+        "userAnswer": "ыыыы",
+        "correctAnswer": "SQL базы (PostgreSQL, MySQL) используют таблицы и строгую схему, подходят для сложных запросов. NoSQL (MongoDB, Redis) более гибкие, хранят документы/ключ-значения, лучше для больших данных и быстрой разработки.",
+        "isCorrect": false,
+        "explanation": "Сравните структуру, гибкость, производительность и сценарии использования",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "matchedKeywords": [],
+          "missingKeywords": [],
+          "suggestions": [
+            "Напишите более развернутый ответ"
+          ],
+          "errors": [
+            "Ответ слишком короткий"
+          ]
+        }
+      },
+      {
+        "questionNumber": 3,
+        "question": "Напишите функцию для быстрой сортировки (quicksort)",
+        "type": "code",
+        "userAnswer": "Код предоставлен",
+        "correctAnswer": "function quickSort(arr) {\n  if (arr.length <= 1) return arr;\n  const pivot = arr[0];\n  const left = [], right = [];\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) left.push(arr[i]);\n    else right.push(arr[i]);\n  }\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+        "isCorrect": false,
+        "explanation": "Быстрая сортировка использует разделяй-и-властвуй с опорным элементом",
+        "checkDetails": {
+          "isCorrect": false,
+          "score": 0,
+          "errors": [
+            "Ошибка выполнения: ыыыы is not defined"
+          ],
+          "output": null,
+          "suggestions": [
+            "Проверьте синтаксис вашего кода"
+          ]
+        }
+      }
+    ]
+  }
+]
